@@ -7,6 +7,7 @@ int main() {
 
     cout << "Puzirkovya sorting: " << endl;
     cout << "Ishod massive: "  << endl;
+
     for(int i=0;i<n;i++)
     {
         cout << arr1[i] << " ";
@@ -41,5 +42,35 @@ int main() {
     {
         cout << arr1[i] << " " <<endl;
     }
-    return 0;
+
+    int arr2[] = {46, 528, 2, 3, 218};
+
+    cout << "Finiched sort: " << endl;
+    cout << "Ishod mass: " << endl;
+    for(int i=0;i<n;i++)
+    {
+        cout << arr2[i] << " ";
+    }
+    cout << endl;
+
+    sort(arr2, arr2+n, [](int a, int b)  {
+        cout << "Biblioteka sravnivaet: " << a << " and " << b << endl;
+        if(a<b)
+        {
+            cout << "Menshe " <<endl;
+            return true;
+        }
+        else
+        {
+            cout << "Bolshe " << endl;
+            return false;
+        }
+    });
+
+    cout << "Otsort massive: " << endl;
+    for(int i=0;i<n;i++)
+    {
+        cout << arr2[i] << " ";
+    }
+
 }
